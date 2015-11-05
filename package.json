@@ -23,7 +23,7 @@
     "gulp-stylus": "2.1.0",
     "gulp-uglify": "1.4.2",
     "gulp-util": "3.0.7",
-    "history": "1.12.5",
+    "history": "^1.13.0",
     "install": "0.1.8",
     "re-base": "1.2.1",
     "react": "0.14.0",
@@ -31,7 +31,7 @@
     "react-catalyst": "0.3.0",
     "react-dom": "0.14.0",
     "react-mixin": "3.0.0",
-    "react-router": "1.0.0-rc3",
+    "react-router": "^1.0.0-rc4",
     "vinyl-buffer": "1.0.0",
     "vinyl-source-stream": "1.1.0",
     "watchify": "3.4.0"
