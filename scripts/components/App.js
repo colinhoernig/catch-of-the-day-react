@@ -3,6 +3,7 @@ import { LinkedStateMixin } from 'react-catalyst';
 import Rebase from 're-base';
 import reactMixin from 'react-mixin';
 import autobind from 'autobind-decorator';
+import config from '../config';
 
 import Header from './Header';
 import Order from './Order';
@@ -11,7 +12,7 @@ import Fish from './Fish';
 
 import sampleFishes from '../sample-fishes';
 
-var base = Rebase.createClass('https://catch-react.firebaseio.com/');
+var base = Rebase.createClass(config.firebase_url);
 
 @autobind
 class App extends React.Component {
@@ -99,7 +100,7 @@ class App extends React.Component {
           </ul>
         </div>
         <Order fishes={this.state.fishes} order={this.state.order} removeFromOrder={this.removeFromOrder} />
-        <Inventory addFish={this.addFish} loadSamples={this.loadSamples} fishes={this.state.fishes} linkState={this.linkState.bind(this)} removeFish={this.removeFish} />
+        <Inventory addFish={this.addFish} loadSamples={this.loadSamples} fishes={this.state.fishes} linkState={this.linkState.bind(this)} removeFish={this.removeFish} {...this.props} />
       </div>
     )
   }
